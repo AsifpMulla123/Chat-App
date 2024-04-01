@@ -43,6 +43,7 @@ const Header = () => {
   };
   const OpenNewGroup = () => {
     console.log("Open New Group");
+    setIsNewGroup(!isNewGroup);
   };
   const OpenNotification = () => {
     console.log("Open New Group");

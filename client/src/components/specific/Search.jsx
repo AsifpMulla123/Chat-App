@@ -16,7 +16,7 @@ import { sampleUsers } from "../../constants/sampleData";
 const Search = () => {
   const search = useInputValidation("");
   let isLoadingSendFriendRequest = false;
-  const [users,setUsers] = useState(sampleUsers);
+  const [users, setUsers] = useState(sampleUsers);
   const addFriendHandler = (id) => {
     console.log(id);
   };
@@ -40,14 +40,12 @@ const Search = () => {
         />
         <List>
           {users.map((i) => (
-            <ListItem>
-              <UserItems
-                user={i}
-                key={i._id}
-                handler={addFriendHandler}
-                handlerIsLoading={isLoadingSendFriendRequest}
-              />
-            </ListItem>
+            <UserItems
+              user={i}
+              key={i._id}
+              handler={addFriendHandler}
+              handlerIsLoading={isLoadingSendFriendRequest}
+            />
           ))}
         </List>
       </Stack>
