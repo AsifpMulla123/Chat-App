@@ -16,11 +16,6 @@ const NewGroup = () => {
   const [selectedMembers, setSelectedMembers] = useState([]);
   const groupName = useInputValidation("");
   const selectMemberHandler = (id) => {
-    // setMembers((prev) =>
-    //   prev.map((user) =>
-    //     user._id === id ? { ...user, isAdded: !isAdded } : user
-    //   )
-    // );
     setSelectedMembers((prev) =>
       prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
     );
