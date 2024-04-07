@@ -7,12 +7,12 @@ const requestSchema = new Schema({
         enum: ["pending", "accepted", "rejected"],
     },
     sender: {
-        type: Types.objectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true,
     },
     receiver: {
-        type: Types.objectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true,
     },

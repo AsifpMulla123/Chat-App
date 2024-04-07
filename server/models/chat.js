@@ -10,13 +10,13 @@ const chatSchema = new Schema({
         default: false,
     },
     creator: {
-        type: Types.objectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
     },
     members: [{
-        type: Types.objectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
     }],
 }, { timestamps: true });
 
-export const Chat = mongoose.models.Chat || model("User", chatSchema);
+export const Chat = mongoose.models.Chat || model("Chat", chatSchema);
